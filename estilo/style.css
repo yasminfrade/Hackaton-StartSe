@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+@font-face {
+    font-family: 'Cooper';
+    src: url('../fonte/Cooper Black Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor0: #e1dddd;
+    --cor1: #cac4c4;
+    --cor2: #a6dbd3;
+    --cor3: #282b7d;
+    --cor4: #fc534d;
+    --cor5: #0774ab;
+    --cor6: #20a6ce;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-header: 'Lobster', cursive;
+    --fonte-principal: 'Poppins', cursive;
+    --fonte-destaque: 'Cooper';
+}
+
+body {
+    background-color: var(--cor3);
+    color: white;
+}
