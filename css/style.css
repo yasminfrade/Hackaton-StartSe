@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@font-face {
+	font-family: 'Cooper';
+	src: url('../fonts/Cooper Black Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--color-black: #000000;
+	--color-white: #f5f5f5;
+	--color-0: #e1dddd;
+	--color-1: #cac4c4;
+	--color-2: #a6dbd3;
+	--color-purple: #282b7d;
+	--color-transparency: #00000033;
+	--color-coral: #fc534d;
+	--color-5: #0774ab;
+	--color-6: #20a6ce;
+	--font-base: 'Poppins', cursive;
+	--font-title-head: 'Lobster', cursive;
+	--font-highlights: 'Cooper';
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+*:hover {
+	transition: all 0.15s ease-in;
+}
+
+html,
+body {
+	font-size: 14px;
+	font-family: var(--fonte-base), sans-serif;
+	scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	scroll-behavior: smooth;
+	background-color: var(--color-purple);
+	color: var(--color-white);
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+section{
+	margin-top: 3rem;
+}
+
