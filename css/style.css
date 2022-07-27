@@ -66,3 +66,177 @@ section{
 	margin-top: 3rem;
 }
 
+header {
+	width: 100%;
+	height: 6rem;
+}
+
+main,
+.left,
+.right,
+.buttons,
+#sectionOne,
+#introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+}
+
+#sectionOne {
+	margin-top: 1rem;
+}
+
+#sectionOne .box-title {
+	width: 22rem;
+	text-align: left;
+	padding: 1.6rem 4rem;
+	margin-top: 1.5rem;
+}
+
+.background-dark {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	border-radius: 1.25rem;
+	background-color: var(--color-transparency);
+}
+
+h1 {
+	font-size: 1.25rem;
+	text-shadow: 0.125rem 0.125rem 0.125rem var(--color-black);
+}
+
+h1 .highlight {
+	font-size: 2.5rem;
+}
+
+.highlight {
+	font-family: var(--font-highlights);
+}
+
+#sectionOne .description {
+	margin: 15rem auto 0;
+	width: 15rem;
+}
+
+.description {
+	font-size: 1rem;
+}
+
+.button {
+	margin-top: 0.75rem;
+	width: 17.5rem;
+	height: 2.7rem;
+	border-radius: 1rem;
+	border: 0.05rem solid var(--color-coral);
+	background-color: var(--color-coral);
+	color: var(--color-white);
+}
+
+.filled {
+	background-color: var(--color-transparency);
+	color: var(--color-coral);
+}
+
+.main-image {
+	position: absolute;
+	top: 14rem;
+}
+
+.image {
+	width: 19rem;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+}
+
+#introduction {
+	width: 22rem;
+	padding: 1.6rem;
+}
+
+#introduction .right {
+	align-items: flex-start;
+}
+
+#introduction h2.highlight {
+	width: 80%;
+	font-size: 1.5rem;
+	text-shadow: 0.05rem 0.05rem 0.05rem var(--color-black);
+}
+
+#introduction .description {
+	margin: 1rem auto;
+}
+
+@media (min-width: 720px) {
+	body {
+		text-align: left;
+	}
+
+	#sectionOne,
+	#introduction {
+		justify-content: center;
+		width: 50rem;
+	}
+
+	#sectionOne,
+	.buttons {
+		flex-direction: row;
+	}
+
+	#sectionOne {
+		margin-top: 3rem;
+	}
+
+	#sectionOne .left,
+	#sectionOne .right {
+		align-items: flex-start;
+	}
+
+	#sectionOne .left {
+		z-index: 1;
+	}
+
+	#sectionOne .description {
+		padding-left: 1rem;
+		margin: 1rem 0;
+		width: 25rem;
+	}
+
+	#sectionOne .buttons {
+		justify-content: space-between;
+		width: 36rem;
+	}
+
+	#sectionOne .main-image {
+		margin-left: -20%;
+		width: 25rem;
+		top: 5.8rem;
+	}
+
+	#introduction {
+		flex-direction: row-reverse;
+		height: 24rem;
+	}
+
+	#introduction .right {
+		height: 100%;
+		width: 80%;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 1280px) {
+	#sectionOne .main-image {
+		margin-left: -12%;
+		width: 25rem;
+		top: 5.8rem;
+	}
+}
