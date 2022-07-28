@@ -63,7 +63,8 @@ a {
 	color: inherit;
 }
 
-section {
+section,
+footer {
 	margin-top: 3rem;
 }
 
@@ -77,7 +78,8 @@ main,
 .right,
 .buttons,
 #sectionOne,
-#introduction {
+#introduction,
+footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -207,7 +209,60 @@ img {
 	font-size: 3rem;
 }
 
-#statistics .box-statistic {
+footer {
+	height: 40rem;
+}
+
+footer p {
+	display: flex;
+	text-align: center;
+	font-family: var(--font-base);
+}
+
+.footerImage {
+	height: 40vh;
+	max-width: auto;
+	position: relative;
+	flex-direction: row;
+}
+
+.footerImage > img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#footerTitle {
+	font-family: var(--font-title-head);
+	margin: 2rem auto;
+}
+
+#footer-github {
+	display: flex;
+}
+
+#footer-github > a {
+	padding-left: 0.5rem;
+}
+
+.credits {
+	padding-top: 2rem;
+	font-size: smaller;
+}
+
+#scrollToTop {
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 2rem;
+	font-size: 2.5rem;
+	background-color: var(--color-coral);
+	cursor: pointer;
 }
 
 @media (min-width: 720px) {
@@ -285,6 +340,32 @@ img {
 
 	#statistics .right {
 		align-items: flex-start;
+	}
+
+	footer {
+		height: 50vh;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
+	footer .right {
+		align-items: flex-end;
+		margin-right: 2rem;
+	}
+
+	footer .right p {
+		justify-content: right;
+	}
+
+	.footerImage {
+		height: 50vh;
+		max-width: auto;
+	}
+
+	#footerTitle {
+		margin: 2rem 0;
+		position: relative;
+		right: 0;
 	}
 }
 
