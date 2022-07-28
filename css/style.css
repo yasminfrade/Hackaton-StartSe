@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 @font-face {
 	font-family: 'Cooper';
 	src: url('../fonts/Cooper Black Regular.ttf') format('truetype');
@@ -207,8 +208,7 @@ img {
 	font-size: 3rem;
 }
 
-#statistics .box-statistic {
-}
+#statistics .box-statistic {}
 
 @media (min-width: 720px) {
 	body {
@@ -288,6 +288,117 @@ img {
 	}
 }
 
+/* Contact */
+
+#contact {
+	display: flex;
+	margin-bottom: 48px;
+}
+
+#contact .center {
+	width: 24px;
+}
+
+#contact .left {
+	align-self: baseline;
+	width: 50%;
+}
+
+#contact .left .description {
+	font-family: Poppins;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 35px;
+	max-width: 680px;
+	padding: 28px;
+	text-align: right;
+}
+
+#contact .left .brand-name {
+	font-family: Lobster;
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 35px;
+}
+
+#contact .right {
+	width: 50%;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+	border: none;
+	border-radius: 20px;
+	box-shadow: none;
+	font-family: Poppins;
+	font-size: 16px;
+	padding: 10px 20px;
+}
+
+#contact form {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact form input {
+	margin-bottom: 20px;
+}
+
+#contact form textarea {
+	min-height: 200px;
+	resize: none;
+}
+
+#contact form button {
+	background: #E6655C;
+	box-shadow: none;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+#contact form button {
+	background: #E6655C;
+	color: #ffffff;
+}
+
+#contact .checkbox-container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	margin: 16px;
+}
+
+#contact .checkbox-container input[type=checkbox] {
+	display: none;
+}
+
+#contact .checkbox {
+	cursor: pointer;
+	display: flex;
+}
+
+#contact .checkbox input {
+	position: relative;
+	z-index: -9999;
+}
+
+#contact .checkbox span {
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url("/assets/checkbox_checked.svg");
+}
+
+#contact .checkbox input:checked+span {
+	background: url("/assets/checkbox_unchecked.svg");
+}
+
+#contact .checkbox-label {
+	margin-left: 8px;
+}
+
 @media (min-width: 1280px) {
 	#sectionOne .main-image {
 		margin-left: -12%;
@@ -307,5 +418,27 @@ img {
 	#statistics .right {
 		width: 100%;
 		margin: 0;
+	}
+}
+
+
+@media (max-width: 480px) {
+	#contact {
+		flex-direction: column;
+		padding: 32px;
+	}
+
+	#contact .left .description{
+		text-align: justify;
+	}
+
+	#contact .left,
+	#contact .right {
+		align-self: center;
+		width: 100%;
+	}
+
+	#contact .left {
+		margin-bottom: 48px;
 	}
 }
