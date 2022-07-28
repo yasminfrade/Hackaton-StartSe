@@ -63,7 +63,8 @@ a {
 	color: inherit;
 }
 
-section, footer {
+section,
+footer {
 	margin-top: 3rem;
 }
 
@@ -77,7 +78,7 @@ main,
 .right,
 .buttons,
 #sectionOne,
-#introduction, 
+#introduction,
 footer {
 	display: flex;
 	flex-direction: column;
@@ -208,103 +209,60 @@ img {
 	font-size: 3rem;
 }
 
-footer{        
-    height: 40rem;
-}
-
-.footer-image>img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.footer-image {    
-    height: 40vh;
-    max-width: auto;
-    position: relative;
-    flex-direction: row;
-}
-
-#footer-title {
-	font-family: var(--font-title-head);
+footer {
+	height: 40rem;
 }
 
 footer p {
-    display: flex;
-    text-align: center;    
-    font-family: "Poppins";
+	display: flex;
+	text-align: center;
+	font-family: var(--font-base);
 }
 
-#footer-title {
-    margin: 2rem auto;    
+.footerImage {
+	height: 40vh;
+	max-width: auto;
+	position: relative;
+	flex-direction: row;
 }
 
-.title {
-    font-family: var(--fonte-header);
+.footerImage > img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#footerTitle {
+	font-family: var(--font-title-head);
+	margin: 2rem auto;
 }
 
 #footer-github {
-    display: flex;
+	display: flex;
 }
 
-#footer-github > a{
-    padding-left: 0.5rem;	
+#footer-github > a {
+	padding-left: 0.5rem;
 }
 
-.creditos {
-    padding-top: 2rem;
-    font-size: smaller;
+.credits {
+	padding-top: 2rem;
+	font-size: smaller;
 }
 
-a.scrolltop {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    position: sticky;
-    padding-top: 5rem;
-    
-}
-
-
-
-@media (min-width: 720px) {
-
-    footer{
-        height: 50vh;
-        justify-content: space-around;
-        flex-direction: row;
-    }
-
-    .footer-image {
-        height: 50vh;
-        max-width: auto;     
-    }
-
-
-    #footer-title {
-        margin: 2rem 0;
-        position: relative;
-        right: 0;
-    }
-
-	footer .right{
-        align-items: flex-end;
-		margin-right: 2rem;
-    }
-
-    footer .right p {
-        justify-content: right;
-    }
-
-	a.scrolltop {
-		text-align: center;
-        position: fixed;
-		bottom: 2rem;
-    	left: 50%;
-            
-    }
-
-    
+#scrollToTop {
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 2rem;
+	font-size: 2.5rem;
+	background-color: var(--color-coral);
+	cursor: pointer;
 }
 
 @media (min-width: 720px) {
@@ -382,6 +340,32 @@ a.scrolltop {
 
 	#statistics .right {
 		align-items: flex-start;
+	}
+
+	footer {
+		height: 50vh;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
+	footer .right {
+		align-items: flex-end;
+		margin-right: 2rem;
+	}
+
+	footer .right p {
+		justify-content: right;
+	}
+
+	.footerImage {
+		height: 50vh;
+		max-width: auto;
+	}
+
+	#footerTitle {
+		margin: 2rem 0;
+		position: relative;
+		right: 0;
 	}
 }
 
