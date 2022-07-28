@@ -16,6 +16,8 @@
 	--color-1: #cac4c4;
 	--color-2: #a6dbd3;
 	--color-purple: #282b7d;
+	--color-purple-dark: #252265;
+	--color-hover: #ffffff1a;
 	--color-transparency: #00000033;
 	--color-coral: #fc534d;
 	--color-5: #0774ab;
@@ -35,6 +37,10 @@
 
 *:hover {
 	transition: all 0.15s ease-in;
+}
+
+a:hover {
+	background: var(--color-hover);
 }
 
 html,
@@ -72,9 +78,123 @@ footer {
 	margin-top: 3rem;
 }
 
-header {
+body > header {
+	position: fixed;
+	top: 0;
+	min-height: 4rem;
 	width: 100%;
-	height: 6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var(--color-purple-dark);
+	z-index: 1000;
+}
+
+header h1,
+header .buttonMenuContainer {
+	position: absolute;
+	top: 1rem;
+}
+
+header h1 {
+	left: 40%;
+	font-family: var(--font-title-head);
+}
+
+header .menuSection {
+	width: 100%;
+}
+
+header .buttonMenuContainer {
+	right: 2rem;
+	display: flex;
+}
+
+header #menuCheckbox {
+	display: none;
+}
+
+header label {
+	position: relative;
+	display: block;
+	height: 2rem;
+	width: 2rem;
+}
+
+header label span {
+	position: absolute;
+	display: block;
+	height: 0.125rem;
+	width: 2rem;
+	background-color: var(--color-white);
+	border-radius: 2rem;
+	transition: 0.25s ease-in-out;
+}
+
+header label span:nth-child(1) {
+	top: 0.5rem;
+}
+
+header label span:nth-child(2) {
+	top: 1rem;
+}
+
+header label span:nth-child(3) {
+	top: 1.5rem;
+}
+
+header #menuCheckbox:checked + label span:nth-child(1) {
+	top: 1rem;
+	transform: rotate(-45deg);
+}
+
+header #menuCheckbox:checked + label span:nth-child(2) {
+	opacity: 0;
+}
+
+header #menuCheckbox:checked + label span:nth-child(3) {
+	top: 1rem;
+	transform: rotate(45deg);
+}
+
+header #menuCheckbox:checked ~ nav .menu {
+	transform: translateX(-100vw);
+	transition: 0.5s ease transform;
+}
+
+header nav {
+	margin-top: 4rem;
+}
+
+header nav .menu,
+header nav .menu li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+}
+
+header nav .menu {
+	position: absolute;
+	left: 100%;
+	transform: translateX(100vw);
+	transition: 0.5s ease transform;
+}
+
+header nav .menu li {
+	border-top: 0.125rem solid var(--color-purple);
+	background-color: var(--color-purple-dark);
+}
+
+header nav .menu li a {
+	padding: 1rem;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 main,
@@ -93,7 +213,7 @@ footer {
 }
 
 #sectionOne {
-	margin-top: 1rem;
+	margin-top: 6rem;
 }
 
 #sectionOne .box-title {
@@ -386,12 +506,38 @@ footer .credits {
 
 	#footerTitle {
 		margin: 2rem 0;
-		position: relative;
-		right: 0;
 	}
 }
 
 @media (min-width: 1280px) {
+	header .buttonMenuContainer {
+		position: static;
+		display: none;
+	}
+
+	header h1 {
+		left: 15%;
+	}
+
+	header nav {
+		width: 70vw;
+		margin-top: 0;
+		margin-left: 30vw;
+	}
+
+	header nav .menu,
+	header nav .menu li {
+		flex-direction: row;
+		position: static;
+		transform: none;
+		height: 4rem;
+		width: auto;
+	}
+
+	header nav .menu li a {
+		width: 8rem;
+	}
+
 	#sectionOne .main-image {
 		margin-left: -12%;
 		width: 25rem;
