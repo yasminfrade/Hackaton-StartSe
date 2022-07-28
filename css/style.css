@@ -63,6 +63,10 @@ a {
 	color: inherit;
 }
 
+li {
+	list-style: none;
+}
+
 section,
 footer {
 	margin-top: 3rem;
@@ -79,6 +83,7 @@ main,
 .buttons,
 #sectionOne,
 #introduction,
+#team,
 footer {
 	display: flex;
 	flex-direction: column;
@@ -209,44 +214,52 @@ img {
 	font-size: 3rem;
 }
 
+#team header {
+	height: 4rem;
+}
+
+#team .description {
+	font-family: var(--font-title-head);
+}
+
+#team .profile-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.box-profile {
+	width: 60%;
+	margin-top: 2rem;
+}
+
+.box-profile > img {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+}
+
 footer {
-	height: 40rem;
+	height: 30rem;
+}
+
+footer img {
+	height: 80%;
+	width: auto;
 }
 
 footer p {
-	display: flex;
-	text-align: center;
-	font-family: var(--font-base);
-}
-
-.footerImage {
-	height: 40vh;
-	max-width: auto;
-	position: relative;
-	flex-direction: row;
-}
-
-.footerImage > img {
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
+	margin-bottom: 0;
+	padding-top: 1rem;
 }
 
 #footerTitle {
 	font-family: var(--font-title-head);
-	margin: 2rem auto;
 }
 
-#footer-github {
-	display: flex;
-}
-
-#footer-github > a {
-	padding-left: 0.5rem;
-}
-
-.credits {
-	padding-top: 2rem;
+footer .credits {
 	font-size: smaller;
 }
 
@@ -342,19 +355,28 @@ footer p {
 		align-items: flex-start;
 	}
 
-	footer {
-		height: 50vh;
+	#team {
+		text-align: center;
+	}
+
+	#team .profile-container {
+		flex-direction: row;
+		align-items: center;
 		justify-content: space-around;
+		width: 100%;
+	}
+
+	#team .profile-container .box-profile {
+		width: 18%;
+	}
+
+	footer {
 		flex-direction: row;
 	}
 
 	footer .right {
 		align-items: flex-end;
 		margin-right: 2rem;
-	}
-
-	footer .right p {
-		justify-content: right;
 	}
 
 	.footerImage {
@@ -378,7 +400,8 @@ footer p {
 
 	#statistics,
 	#statistics .left,
-	#statistics .right {
+	#statistics .right,
+	.profile-container {
 		flex-direction: row;
 		align-items: center;
 		height: 20rem;
