@@ -221,6 +221,8 @@ main,
 .buttons,
 #sectionOne,
 #introduction,
+#problems,
+#problems .box-problem,
 #steeps,
 #benefits,
 #benefits .container,
@@ -353,6 +355,25 @@ img {
 
 #statistics .box-statistic h3.highlight {
 	font-size: 3rem;
+}
+
+#problems {
+	background-size: 90%;
+	background-image: url(../assets/elastic-boy-body-1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#problems .box-problem {
+	justify-content: space-evenly;
+	width: 90%;
+	margin-top: 2rem;
+	padding: 2rem;
+}
+
+#problems .box-problem summary.highlight {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
 }
 
 #steeps .steepsCard {
@@ -696,9 +717,19 @@ footer .credits {
 		margin: 0;
 	}
 
+	#problems {
+		height: 35rem;
+		background-size: auto;
+	}
+
+	#problems .box-problem {
+		width: 70%;
+	}
+
 	#steeps {
 		height: 60rem;
 	}
+
 	#steeps .steepsCard {
 		height: 30rem;
 		width: 15rem;
