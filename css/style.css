@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 @font-face {
 	font-family: 'Cooper';
 	src: url('../fonts/Cooper Black Regular.ttf') format('truetype');
@@ -229,6 +230,7 @@ main,
 #benefits .container,
 #articles,
 #team,
+#contact,
 footer {
 	display: flex;
 	flex-direction: column;
@@ -462,70 +464,6 @@ img {
 	margin-top: 2rem;
 }
 
-#team header {
-	height: 4rem;
-}
-
-#team .description {
-	font-family: var(--font-title-head);
-}
-
-#team .profile-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-}
-
-.box-profile {
-	width: 60%;
-	margin-top: 2rem;
-}
-
-.box-profile > img {
-	width: 100%;
-	height: auto;
-	border-radius: 1rem;
-}
-
-footer {
-	height: 30rem;
-}
-
-footer img {
-	height: 80%;
-	width: auto;
-}
-
-footer p {
-	margin-bottom: 0;
-	padding-top: 1rem;
-}
-
-#footerTitle {
-	font-family: var(--font-title-head);
-}
-
-footer .credits {
-	font-size: smaller;
-}
-
-#scrollToTop {
-	position: fixed;
-	right: 2rem;
-	bottom: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 3rem;
-	width: 3rem;
-	border-radius: 2rem;
-	font-size: 2.5rem;
-	background-color: var(--color-coral);
-	cursor: pointer;
-}
-
 #articles,
 .articles-div-bg {
 	background-size: 90%;
@@ -608,6 +546,157 @@ footer .credits {
 
 #articles .articlesButton:hover {
 	color: var(--color-coral);
+}
+
+#team header {
+	height: 4rem;
+}
+
+#team .description {
+	font-family: var(--font-title-head);
+}
+
+#team .profile-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.box-profile {
+	width: 60%;
+	margin-top: 2rem;
+}
+
+.box-profile > img {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+}
+
+#contact .left,
+#contact .right {
+	width: 90%;
+	margin-top: 2rem;
+}
+
+#contact .left .description {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2rem;
+	padding: 2rem;
+}
+
+#contact .left .brand-name {
+	font-family: var(--font-title-head);
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 2rem;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+	border: none;
+	border-radius: 1.5rem;
+	box-shadow: none;
+	font-size: 1rem;
+	padding: 1rem 1.5rem;
+}
+
+#contact form {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact form input {
+	margin-bottom: 1.5rem;
+}
+
+#contact form textarea {
+	min-height: 12rem;
+	resize: none;
+}
+
+#contact .checkbox-container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	margin: 1rem;
+}
+
+#contact .checkbox-container input[type='checkbox'] {
+	display: none;
+}
+
+#contact .checkbox {
+	cursor: pointer;
+	display: flex;
+}
+
+#contact .checkbox input {
+	z-index: -1;
+}
+
+#contact .checkbox span {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: block;
+	background: url('/assets/checkbox_checked.svg');
+}
+
+#contact .checkbox input:checked + span {
+	background: url('/assets/checkbox_unchecked.svg');
+}
+
+#contact .checkbox-label {
+	margin-left: 8px;
+}
+
+#contact form button {
+	background: var(--color-coral);
+	color: var(--color-white);
+	box-shadow: none;
+	cursor: pointer;
+}
+
+footer {
+	height: 30rem;
+}
+
+footer img {
+	height: 80%;
+	width: auto;
+}
+
+footer p {
+	margin-bottom: 0;
+	padding-top: 1rem;
+}
+
+#footerTitle {
+	font-family: var(--font-title-head);
+}
+
+footer .credits {
+	font-size: smaller;
+}
+
+#scrollToTop {
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 2rem;
+	font-size: 2.5rem;
+	background-color: var(--color-coral);
+	cursor: pointer;
 }
 
 @media (min-width: 720px) {
@@ -895,5 +984,23 @@ footer .credits {
 
 	#articles .articles-card {
 		width: 80%;
+	}
+
+	#contact {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#contact .left,
+	#contact .right {
+		width: 40%;
+		margin: 2rem;
+	}
+
+	#contact .left .description {
+		height: 24rem;
+		width: 30rem;
+		line-height: 3rem;
+		text-align: right;
 	}
 }
