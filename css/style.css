@@ -59,7 +59,7 @@ a:hover {
 html,
 body {
 	font-size: 14px;
-	font-family: var(--fonte-base), sans-serif;
+	font-family: var(--font-base), sans-serif;
 	scroll-behavior: smooth;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -89,6 +89,7 @@ li {
 .textLeft {
 	text-align: left;
 }
+
 .textRight {
 	text-align: right;
 }
@@ -217,9 +218,15 @@ header nav .menu li a {
 	justify-content: center;
 }
 
+main {
+	/* max-width: 90rem;
+	margin: auto; */
+}
+
 main,
 .left,
 .right,
+.center,
 .buttons,
 #sectionOne,
 #introduction,
@@ -229,7 +236,9 @@ main,
 #benefits,
 #benefits .container,
 #articles,
+#articles .articles-box,
 #team,
+#team .profile-container,
 #contact,
 footer {
 	display: flex;
@@ -246,7 +255,6 @@ footer {
 #sectionOne .box-title {
 	width: 22rem;
 	text-align: left;
-	padding: 1.6rem 4rem;
 	margin-top: 1.5rem;
 }
 
@@ -256,6 +264,7 @@ footer {
 	justify-content: start;
 	align-items: center;
 	border-radius: 1.25rem;
+	padding: 2rem;
 	background-color: var(--color-transparency);
 }
 
@@ -298,7 +307,7 @@ h1 .highlight {
 
 .main-image {
 	position: absolute;
-	top: 14rem;
+	top: 18rem;
 }
 
 .image {
@@ -313,7 +322,6 @@ img {
 
 #introduction {
 	width: 22rem;
-	padding: 1.6rem;
 }
 
 #introduction .right {
@@ -342,7 +350,7 @@ img {
 #statistics {
 	background: var(--linear-gradient);
 	width: 100%;
-	height: 70rem;
+	max-height: 70rem;
 }
 
 #statistics .left,
@@ -370,9 +378,9 @@ img {
 
 #problems .box-problem {
 	justify-content: space-evenly;
-	width: 90%;
+	min-width: 70%;
+	max-width: 90%;
 	margin-top: 2rem;
-	padding: 2rem;
 }
 
 #problems .box-problem summary.highlight {
@@ -387,16 +395,16 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 1.5rem;
-	margin-left: -15%;
-	margin-right: 15%;
+	margin-left: -8%;
+	margin-right: 8%;
 	text-align: left;
 	border-radius: 2.125rem;
 }
 
 #steeps .steepsCard:nth-child(even) {
 	flex-direction: row-reverse;
-	margin-left: 15%;
-	margin-right: -15%;
+	margin-left: 8%;
+	margin-right: -8%;
 	text-align: right;
 }
 
@@ -437,10 +445,9 @@ img {
 }
 
 #benefits .benefitsCard {
-	width: 80%;
-	height: 15rem;
-	padding: 2rem;
-	border-radius: 15px;
+	max-width: 80%;
+	/* height: 15rem; */
+	border-radius: 1rem;
 }
 
 #benefits .benefitsCard > * {
@@ -493,12 +500,14 @@ img {
 }
 
 #articles .articles-box {
-	display: flex;
 	flex-direction: row;
+	padding: 3rem 2rem;
+	border-radius: 0;
+	/* display: flex;
 	justify-content: space-around;
-	align-items: center;
-	background-color: var(--color-transparency);
-	padding: 1.5rem;
+	align-items: center; */
+	/* background-color: var(--color-transparency); */
+	/* padding: 1.5rem; */
 }
 
 #articles .articles-card {
@@ -549,30 +558,40 @@ img {
 }
 
 #team header {
-	height: 4rem;
+	/* height: 4rem; */
 }
 
-#team .description {
-	font-family: var(--font-title-head);
+#team header .highlight {
+	font-size: 2.4rem;
+}
+
+#team header .description {
+	font-size: 1.6rem;
 }
 
 #team .profile-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	width: 100%;
 }
 
-.box-profile {
-	width: 60%;
+#team .profile-container .box-profile {
+	width: 80%;
 	margin-top: 2rem;
 }
 
-.box-profile > img {
+#team .profile-container .box-profile > img {
 	width: 100%;
 	height: auto;
 	border-radius: 1rem;
+}
+
+#team .profile-container h3 {
+	font-size: 1rem;
+}
+
+#team .profile-container .description {
+	height: 4rem;
+	font-size: 1.2rem;
+	font-family: var(--font-title-head);
 }
 
 #contact .left,
@@ -585,7 +604,6 @@ img {
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 2rem;
-	padding: 2rem;
 }
 
 #contact .left .brand-name {
@@ -663,17 +681,21 @@ img {
 }
 
 footer {
-	height: 30rem;
+	line-height: 2rem;
 }
 
+footer .center {
+	padding-bottom: 2rem;
+}
+
+/* footer .left,
+footer .right {
+	height: 100%;
+} */
 footer img {
-	height: 80%;
-	width: auto;
-}
-
-footer p {
-	margin-bottom: 0;
-	padding-top: 1rem;
+	/* height: auto; */
+	width: 100%;
+	/* background-color: ; */
 }
 
 #footerTitle {
@@ -693,6 +715,7 @@ footer .credits {
 	justify-content: center;
 	height: 3rem;
 	width: 3rem;
+	padding: 2rem;
 	border-radius: 2rem;
 	font-size: 2.5rem;
 	background-color: var(--color-coral);
@@ -700,22 +723,36 @@ footer .credits {
 }
 
 @media (min-width: 720px) {
+	html {
+		font-size: 16px;
+	}
+
 	body {
 		text-align: left;
+	}
+
+	main,
+	.center {
+		max-width: 80%;
+		margin: auto;
+	}
+
+	.center {
+		max-width: 90%;
+		flex-direction: row;
+
+		justify-content: center;
 	}
 
 	#sectionOne,
 	#introduction {
 		justify-content: center;
-		width: 50rem;
+		width: 100%;
 	}
 
 	#sectionOne {
 		flex-direction: row;
-	}
-
-	#sectionOne {
-		margin-top: 3rem;
+		margin-top: 2rem;
 	}
 
 	#sectionOne .left,
@@ -725,78 +762,97 @@ footer .credits {
 
 	#sectionOne .left {
 		z-index: 1;
-		margin-top: 6rem;
+		margin-top: 2rem;
 	}
 
 	#sectionOne .description {
-		padding-left: 1rem;
+		padding-left: 0.5rem;
 		margin: 1rem 0;
-		width: 25rem;
+		width: 40vw;
 	}
 
 	#sectionOne .buttons {
 		align-items: flex-start;
-		width: 24rem;
+		/* width: 24rem; */
 		margin-right: 12rem;
 	}
 
 	#sectionOne .main-image {
-		margin-left: -20%;
+		top: 10rem;
 		width: 25rem;
-		top: 5.8rem;
+		margin-left: -30vw;
 	}
 
 	#introduction {
 		flex-direction: row-reverse;
-		height: 24rem;
+		/* height: 24rem; */
 	}
 
 	#introduction .right {
-		height: 100%;
-		width: 80%;
-		justify-content: center;
+		/* height: 100%; */
+		/* width: 80%; */
+		/* justify-content: center; */
 	}
 
 	#statistics {
-		align-items: center;
-		flex-direction: row;
-		height: 35rem;
+		width: 100vw;
+		/* align-items: center; */
+		/* flex-direction: row; */
+		/* max-height: 35rem; */
 	}
 
-	#statistics .left,
-	#statistics .right {
-		width: 40%;
-		margin: auto;
+	#statistics .center .left,
+	#statistics .center .right {
+		/* flex-direction: row; */
+		/* align-items: center; */
+		/* width: 30%; */
+		/* margin: auto ; */
 	}
 
 	#statistics .left {
-		align-items: flex-end;
+		/* align-items: flex-start; */
 	}
 
 	#statistics .right {
-		align-items: flex-start;
+		/* align-items: flex-end; */
 	}
 
-	#steeps .cardText * {
+	/* #steeps .steepsCard img {
+		width: 100%;
+	} */
+
+	/* #steeps .steepsCard {
+		margin-left: -8%;
+		margin-right: 8%;
+	}
+
+	#steeps .steepsCard:nth-child(even) {
+		margin-left: 8%;
+		margin-right: -8%;
+	} */
+
+	#steeps .cardText > * {
 		line-height: 3rem;
+		width: 32vw;
 	}
 
-	#steeps .cardText h1 {
+	/* #steeps .cardText h1 {
 		font-size: 2rem;
 	}
 
 	#steeps .cardText p {
 		font-size: 1.5rem;
-	}
+	} */
 
 	#articles {
+		width: 100vw;
 		text-align: center;
 	}
-
+	/*
 	#articles .articles-card > p {
 		margin: auto;
 		width: 80%;
-	}
+	} */
 
 	#team {
 		text-align: center;
@@ -813,18 +869,31 @@ footer .credits {
 		width: 18%;
 	}
 
+	#contact .left,
+	#contact .right {
+		width: 100%;
+		/* margin: 2rem; */
+	}
+
 	footer {
 		flex-direction: row;
+		text-align: right;
+	}
+
+	footer .left,
+	footer .right {
+		width: 44%;
 	}
 
 	footer .right {
 		align-items: flex-end;
-		margin-right: 2rem;
+		/* margin-right: 2rem; */
 	}
-
-	.footerImage {
-		height: 50vh;
-		max-width: auto;
+	footer img {
+		/* .footerImage { */
+		width: 40vh;
+		margin-top: -4rem;
+		/* max-width: auto; */
 	}
 
 	#footerTitle {
@@ -833,6 +902,10 @@ footer .credits {
 }
 
 @media (min-width: 1280px) {
+	/* html {
+		font-size: 16px;
+	} */
+
 	header .buttonMenuContainer {
 		position: static;
 		display: none;
@@ -861,25 +934,30 @@ footer .credits {
 		width: 8rem;
 	}
 
+	#sectionOne {
+		margin-top: 8rem;
+	}
+
 	#sectionOne .main-image {
-		margin-left: -12%;
+		/* margin-left: -12%; */
+		margin-left: -16vw;
 		width: 30rem;
-		top: 5.8rem;
+		top: 6rem;
 	}
 
 	#sectionOne .left {
-		margin-top: 10rem;
-		margin-left: -6rem;
+		/* margin-top: 10rem; */
+		margin-left: 6rem;
 	}
 
 	#sectionOne .buttons {
 		flex-direction: row;
-		justify-content: space-between;
+		/* justify-content: space-between; */
 		width: 36rem;
 	}
 
 	#introduction {
-		width: 65rem;
+		/* width: 65rem; */
 	}
 
 	#statistics,
@@ -906,50 +984,45 @@ footer .credits {
 		background-size: auto;
 	}
 
-	#problems .box-problem {
-		width: 70%;
-	}
-
 	#steeps {
 		height: 60rem;
 	}
 
 	#steeps .steepsCard {
-		height: 30rem;
-		width: 15rem;
+		/* height: 30rem; */
+		width: 16rem;
 		flex-direction: column;
-		margin-left: 0;
-		margin-right: 0;
-		margin-top: -10rem;
-		margin-bottom: 10rem;
+		margin: 0 1rem;
 		text-align: center;
 	}
 
 	#steeps .steepsCard:nth-child(even) {
 		flex-direction: column-reverse;
-		margin-left: 0;
-		margin-right: 0;
-		margin-top: 10rem;
-		margin-bottom: -10rem;
+		margin: 0 1rem;
 		text-align: center;
+	}
+
+	#steeps .cardText {
+		max-width: 100%;
 	}
 
 	#steeps .cardText * {
 		line-height: 2rem;
+		width: 16rem;
 	}
 
 	#benefits .benefitsCard {
-		width: 30rem;
-		height: 20rem;
+		/* width: 30rem; */
+		/* height: 20rem; */
 	}
 
 	#benefits .benefitsCard span {
-		font-size: 1.6rem;
+		/* font-size: 1.6rem; */
 	}
 
 	#benefits .container .benefitsImg {
-		margin: 0 -20rem;
-		width: 35rem;
+		margin: 5rem -10rem;
+		width: 100%;
 	}
 
 	#benefits .button {
@@ -970,11 +1043,11 @@ footer .credits {
 	}
 
 	#articles .articles-title > h1 {
-		font-size: 3.8rem;
+		/* font-size: 3.8rem; */
 	}
 
 	#articles .articles-title > p {
-		font-size: 1.8rem;
+		/* font-size: 1.8rem; */
 	}
 
 	#articles .articles-box {
@@ -986,21 +1059,52 @@ footer .credits {
 		width: 80%;
 	}
 
+	#team {
+		height: 45rem;
+		/* background-color: red; */
+	}
+	#team header {
+		height: 20%;
+		/* width: 100%; */
+		/* background-color: green; */
+	}
+
+	#team .profile-container {
+		height: 80%;
+		/* width: 100%; */
+		/* background-color: green; */
+	}
+
+	#team .profile-container .box-profile {
+		/* height: 100%; */
+		/* width: 70%; */
+		/* margin-top: 2rem; */
+	}
+
+	#team .profile-container .box-profile > img {
+		/* width: 90%; */
+		/* height: auto; */
+		/* border-radius: 1rem; */
+	}
+
 	#contact {
 		flex-direction: row;
-		justify-content: center;
+		/* justify-content: center; */
+		width: 100%;
+		/* background-color: green; */
 	}
 
 	#contact .left,
 	#contact .right {
-		width: 40%;
-		margin: 2rem;
+		width: 48%;
+		/* background-color: red; */
+		/* margin: 2rem; */
 	}
 
-	#contact .left .description {
+	/* #contact .left .description {
 		height: 24rem;
 		width: 30rem;
 		line-height: 3rem;
 		text-align: right;
-	}
+	} */
 }
