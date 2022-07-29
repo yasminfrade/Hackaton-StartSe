@@ -409,8 +409,7 @@ footer .credits {
 		width: 50rem;
 	}
 
-	#sectionOne,
-	.buttons {
+	#sectionOne {
 		flex-direction: row;
 	}
 
@@ -425,6 +424,7 @@ footer .credits {
 
 	#sectionOne .left {
 		z-index: 1;
+		margin-top: 6rem;
 	}
 
 	#sectionOne .description {
@@ -434,8 +434,9 @@ footer .credits {
 	}
 
 	#sectionOne .buttons {
-		justify-content: space-between;
-		width: 36rem;
+		align-items: flex-start;
+		width: 24rem;
+		margin-right: 12rem;
 	}
 
 	#sectionOne .main-image {
@@ -540,8 +541,24 @@ footer .credits {
 
 	#sectionOne .main-image {
 		margin-left: -12%;
-		width: 25rem;
+		width: 30rem;
 		top: 5.8rem;
+	}
+
+	#sectionOne .left {
+		margin-top: 10rem;
+		margin-left: -6rem;
+	}
+
+	#sectionOne .buttons {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 36rem;
+
+	}
+
+	#introduction{
+		width: 65rem;
 	}
 
 	#statistics,
