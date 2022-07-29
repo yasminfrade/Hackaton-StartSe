@@ -19,6 +19,7 @@
 	--color-purple-dark: #252265;
 	--color-hover: #ffffff1a;
 	--color-transparency: #00000033;
+	--color-transparency-strong: #00000033;
 	--color-purple-transp: #373e7de6;
 	--color-coral: #fc534d;
 	--color-5: #0774ab;
@@ -226,6 +227,7 @@ main,
 #steeps,
 #benefits,
 #benefits .container,
+#articles,
 #team,
 footer {
 	display: flex;
@@ -524,6 +526,90 @@ footer .credits {
 	cursor: pointer;
 }
 
+#articles,
+.articles-div-bg {
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('./assets/ouchschool.png');
+}
+
+#articles {
+	background: linear-gradient(--linear-gradient-top-bottom);
+}
+
+#articles .articles-title {
+	padding: 1.5rem;
+	line-height: 2rem;
+}
+
+#articles .articles-title > h1 {
+	font-family: var(--font-highlights);
+	text-shadow: 0px 4px 5px var(--color-transparency-strong);
+	font-size: 3rem;
+}
+
+#articles .articles-title > p {
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+}
+
+#articles .articles-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--color-transparency);
+	padding: 1.5rem;
+}
+
+#articles .articles-card {
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 90%;
+	background-color: var(--color-purple-transp);
+}
+
+#articles .articles-card > h2 {
+	font-size: 1.8rem;
+	padding: 1rem;
+	font-weight: 700;
+	height: 7rem;
+}
+
+#articles .articles-card > p {
+	font-size: 1.2rem;
+	padding: 1rem;
+	font-weight: 300;
+}
+
+#articles .articles-card > img {
+	width: 100%;
+}
+
+#articles a {
+	text-decoration: none;
+	color: var(--color-coral);
+	font-size: 1.4rem;
+	padding: 0.5rem;
+}
+
+#articles a:hover {
+	text-decoration: none;
+	background-color: var(--color-coral);
+	color: var(--color-white);
+}
+
+#articles .articlesButton {
+	cursor: pointer;
+}
+
+#articles .articlesButton:hover {
+	color: var(--color-coral);
+}
+
 @media (min-width: 720px) {
 	body {
 		text-align: left;
@@ -612,6 +698,15 @@ footer .credits {
 
 	#steeps .cardText p {
 		font-size: 1.5rem;
+	}
+
+	#articles {
+		text-align: center;
+	}
+
+	#articles .articles-card > p {
+		margin: auto;
+		width: 80%;
 	}
 
 	#team {
@@ -771,5 +866,34 @@ footer .credits {
 	#benefits .button {
 		margin-top: 3rem;
 		width: 28rem;
+	}
+
+	#articles {
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	#articles .articles-title {
+		align-items: flex-end;
+		width: 50%;
+		line-height: 3rem;
+	}
+
+	#articles .articles-title > h1 {
+		font-size: 3.8rem;
+	}
+
+	#articles .articles-title > p {
+		font-size: 1.8rem;
+	}
+
+	#articles .articles-box {
+		border-radius: 0rem 1.5rem 1.5rem 0rem;
+		padding: 3rem;
+	}
+
+	#articles .articles-card {
+		width: 80%;
 	}
 }
