@@ -19,13 +19,24 @@
 	--color-purple-dark: #252265;
 	--color-hover: #ffffff1a;
 	--color-transparency: #00000033;
+	--color-purple-transp: #373e7de6;
 	--color-coral: #fc534d;
 	--color-5: #0774ab;
 	--color-6: #20a6ce;
 	--font-base: 'Poppins', cursive;
 	--font-title-head: 'Lobster', cursive;
 	--font-highlights: 'Cooper';
-	--linear-gradient: linear-gradient(to right, #58287d, #cd544e);
+	--linear-gradient: linear-gradient(to right, #58287d, var(--color-coral));
+	--linear-gradient-top-bottom: linear-gradient(
+		to bottom,
+		#3e2680,
+		var(--color-purple)
+	);
+	--linear-gradient-bottom-top: linear-gradient(
+		to top,
+		#3e2680,
+		var(--color-purple)
+	);
 }
 
 * {
@@ -210,6 +221,7 @@ main,
 .buttons,
 #sectionOne,
 #introduction,
+#steeps,
 #benefits,
 #benefits .container,
 #team,
@@ -343,6 +355,62 @@ img {
 	font-size: 3rem;
 }
 
+#steeps .steepsCard {
+	max-width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	margin-left: -15%;
+	margin-right: 15%;
+	text-align: left;
+	border-radius: 2.125rem;
+}
+
+#steeps .steepsCard:nth-child(even) {
+	flex-direction: row-reverse;
+	margin-left: 15%;
+	margin-right: -15%;
+	text-align: right;
+}
+
+#steeps .steepsCard:nth-child(1) {
+	background-image: url(./assets/num1.png);
+}
+
+#steeps .steepsCard:nth-child(2) {
+	background-image: url(./assets/num2.png);
+}
+
+#steeps .steepsCard:nth-child(3) {
+	background-image: url(./assets/num3.png);
+}
+
+#steeps .steepsCard:nth-child(4) {
+	background-image: url(./assets/num4.png);
+}
+
+#steeps .steepsCard:nth-child(5) {
+	background-image: url(./assets/num5.png);
+}
+
+#steeps .cardText {
+	margin: 1rem;
+}
+
+#steeps .cardText * {
+	line-height: 1.5rem;
+}
+
+#steeps .cardText h1 {
+	font-size: 1.2rem;
+}
+
+#steeps .cardText p {
+	font-size: 1rem;
+}
+
 #benefits .benefitsCard {
 	width: 80%;
 	height: 15rem;
@@ -353,6 +421,11 @@ img {
 #benefits .benefitsCard > * {
 	width: 100%;
 	line-height: 2rem;
+}
+
+#benefits .benefitsCard span {
+	font-family: var(--font-title-head);
+	font-size: 1.4rem;
 }
 
 #benefits .container .benefitsImg {
@@ -508,6 +581,18 @@ footer .credits {
 		align-items: flex-start;
 	}
 
+	#steeps .cardText * {
+		line-height: 3rem;
+	}
+
+	#steeps .cardText h1 {
+		font-size: 2rem;
+	}
+
+	#steeps .cardText p {
+		font-size: 1.5rem;
+	}
+
 	#team {
 		text-align: center;
 	}
@@ -595,6 +680,7 @@ footer .credits {
 	#statistics,
 	#statistics .left,
 	#statistics .right,
+	#steeps,
 	#benefits .container,
 	#benefits .left,
 	#benefits .right,
@@ -610,9 +696,40 @@ footer .credits {
 		margin: 0;
 	}
 
+	#steeps {
+		height: 60rem;
+	}
+	#steeps .steepsCard {
+		height: 30rem;
+		width: 15rem;
+		flex-direction: column;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: -10rem;
+		margin-bottom: 10rem;
+		text-align: center;
+	}
+
+	#steeps .steepsCard:nth-child(even) {
+		flex-direction: column-reverse;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 10rem;
+		margin-bottom: -10rem;
+		text-align: center;
+	}
+
+	#steeps .cardText * {
+		line-height: 2rem;
+	}
+
 	#benefits .benefitsCard {
 		width: 30rem;
 		height: 20rem;
+	}
+
+	#benefits .benefitsCard span {
+		font-size: 1.6rem;
 	}
 
 	#benefits .container .benefitsImg {
